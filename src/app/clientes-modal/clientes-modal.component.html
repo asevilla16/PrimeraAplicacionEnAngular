@@ -1,0 +1,123 @@
+<div class="modal fade" id="myModal">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+
+            <!-- Modal Header -->
+            <div class="modal-header">
+                <h4 class="modal-title">Cliente</h4>
+                <button type="button" class="close" (click)="hideModal()">&times;</button>
+            </div>
+
+            <!-- Modal body -->
+            <div class="modal-body">
+                <form>
+
+                    <div class="form-row">
+                        <div class="form-group col-md-6">
+                            <div class="input-group mb-3">
+                                <div class="input-group-prepend">
+                                    <span class="input-group-text"><i class="fa fa-user"></i></span>
+                                </div>
+                                <input [(ngModel)]="cliente.Nombre" name="Nombre" type="text" id="#Nombre"
+                                    class="form-control" placeholder="Nombre" aria-label="Nombre"
+                                    aria-describedby="basic-addon1">
+                            </div>
+                        </div>
+                        <div class="form-group col-md-6">
+                            <div class="input-group mb-3">
+                                <div class="input-group-prepend">
+                                    <span class="input-group-text"><i class="fa fa-user"></i></span>
+                                </div>
+                                <input [(ngModel)]="cliente.Apellido" name="Apellido" type="text" id="#Apellido"
+                                    class="form-control" placeholder="Apellido" aria-label="Apellido"
+                                    aria-describedby="basic-addon1">
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="form-row">
+                        <div class="form-group col-md-6">
+                            <div class="input-group mb-3">
+                                <div class="input-group-prepend">
+                                    <span class="input-group-text"><i class="fa fa-mobile"></i></span>
+                                </div>
+                                <input [(ngModel)]="cliente.Telefono" name="Telefono" type="text" id="#Telefono"
+                                    class="form-control" placeholder="Telefono" aria-label="Telefono"
+                                    aria-describedby="basic-addon1">
+                            </div>
+                        </div>
+                        <div class="form-group col-md-6">
+                            <div class="input-group mb-3">
+                                <div class="input-group-prepend">
+                                    <span class="input-group-text"><i class="fa fa-envelope"></i></span>
+                                </div>
+                                <input [(ngModel)]="cliente.Correo" name="Correo" type="text" id="#Correo"
+                                    class="form-control" placeholder="Correo" aria-label="Correo"
+                                    aria-describedby="basic-addon1">
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <div class="form-row">
+                        <div class="form-group col-md-6">
+                            <div class="input-group mb-3">
+                                <div class="input-group-prepend">
+                                    <span class="input-group-text"><i class="fa fa-address-book"></i></span>
+                                </div>
+                                <input [(ngModel)]="cliente.Departamento" name="Departamento" type="text"
+                                    id="#Departamento" class="form-control" placeholder="Departamento"
+                                    aria-label="Departamento" aria-describedby="basic-addon1">
+                            </div>
+                        </div>
+                        <div class="form-group col-md-6">
+                            <div class="input-group mb-3">
+                                <div class="input-group-prepend">
+                                    <span class="input-group-text"><i class="fa fa-address-book"></i></span>
+                                </div>
+                                <input [(ngModel)]="cliente.Ciudad" name="Ciudad" type="text" id="#Ciudad"
+                                    class="form-control" placeholder="Ciudad" aria-label="Ciudad"
+                                    aria-describedby="basic-addon1">
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="form-row">
+                        <div class="form-group col-md-6">
+                            <div class="input-group mb-3">
+                                <div class="input-group-prepend">
+                                    <span class="input-group-text"><i class="fa fa-road"></i></span>
+                                </div>
+                                <input [(ngModel)]="cliente.Calle" name="Calle" type="text" id="#Calle"
+                                    class="form-control" placeholder="Calle" aria-label="Calle"
+                                    aria-describedby="basic-addon1">
+                            </div>
+                        </div>
+                        <div class="form-group col-md-6">
+                            <div class="input-group mb-3">
+                                <div class="input-group-prepend">
+                                    <span class="input-group-text"><i class="fa fa-map-marker"></i></span>
+                                </div>
+                                <input [(ngModel)]="cliente.CodigoPostal" name="CodigoPostal" type="text"
+                                    id="#CodigoPostal" class="form-control" placeholder="CodigoPostal"
+                                    aria-label="CodigoPostal" aria-describedby="basic-addon1">
+                            </div>
+                        </div>
+                    </div>
+
+
+                </form>
+            </div>
+
+            <!-- Modal footer -->
+            <div class="modal-footer">
+                <button type="button" class="btn btn-success" (click)="Guardar(cliente)">Agregar</button>
+                <button type="button" class="btn btn-danger" (click)="hideModal()">Salir</button>
+
+                <!-- this button is hidden, used to close from typescript -->
+                <button type="button" id="close-modal" data-dismiss="modal" style="display: none">Close</button>
+
+            </div>
+        </div>
+    </div>
+</div>

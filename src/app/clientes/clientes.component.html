@@ -1,0 +1,54 @@
+
+<div class="row">
+    <div class="col-md-3">
+        <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#myModal" (click)="showModal()">
+            <i class="fa fa-plus"></i>  Nuevo
+          </button>
+    </div>
+    <app-clientes-modal [id]="selectedId" [modoEdicion]="modoEdicion" ></app-clientes-modal>
+</div>
+
+<br>
+
+<div class="row">
+
+  <div class="col-md-8">
+
+      <table class="table table-bordered table-dark">
+          <thead>
+            <tr>
+              <th scope="col">#</th>
+              <th scope="col">Nombre</th>
+              <th scope="col">Apellido</th>
+              <th scope="col">Telefono</th>
+              <th scope="col">Correo</th>
+              <th scope="col">Calle</th>
+              <th scope="col">Ciudad</th>
+              <th scope="col">Departamento</th>
+              <th scope="col">CodigoPostal</th>
+              <th scope="col">Accion</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr *ngFor="let cliente of ListaClientesApi">
+              <th scope="row">{{cliente.id}}</th>
+              <td>{{cliente.Nombre}}</td>
+              <td>{{cliente.Apellido}}</td>
+              <td>{{cliente.Telefono}}</td>
+              <td>{{cliente.Correo}}</td>
+              <td>{{cliente.Calle}}</td>
+              <td>{{cliente.Ciudad}}</td>
+              <td>{{cliente.Departamento}}</td>
+              <td>{{cliente.CodigoPostal}}</td>
+              <td><button class="btn btn-warning" (click)="editarCliente(cliente.id)">Edit</button></td>
+              <td><button class="btn btn-danger" (click)="eliminarCliente(cliente.id)">Delete</button></td>
+            </tr>
+            
+        </table>
+
+
+  </div>
+
+
+</div>
+
